@@ -1,0 +1,1 @@
+﻿component output="false" singleton{	function index(event,rc,prc){		prc.hidefooter = true;		rc.htmltitle = ' > About';		Event.setView('about/index');	}}

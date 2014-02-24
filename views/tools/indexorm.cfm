@@ -1,0 +1,4 @@
+<cfscript>
+	ORMIndex();
+	abort;
+</cfscript>

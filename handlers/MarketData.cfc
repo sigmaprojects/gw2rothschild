@@ -1,0 +1,3 @@
+﻿component output="false" singleton{	property name="ItemService" inject="ItemService";	property name="MarketDataService" inject="MarketDataService";			function getPriceTrends(event,rc,prc) {		var item_id = Event.getNumericValue('item_id',0);		var MarketData = MarketDataService.getDataForChart(Item_ID=Item_ID);		event.renderData(data=MarketData, type='json');
+	}			function test(event,rc,prc) {		var r = ItemService._search();				writedump(var=r,top=3);		abort;
+	}	}

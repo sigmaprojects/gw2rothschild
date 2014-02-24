@@ -1,0 +1,5 @@
+﻿component output="false" singleton{	property name="ItemService" inject="ItemService";	property name="MarketDataService" inject="MarketDataService";	property name="WatchlistService" inject="WatchlistService";	property name="UserService" inject="UserService";		function add(event,rc,prc) {		if( prc.isLoggedIn && Event.getNumericValue('item_id',0) neq 0 ) {			if( !WatchlistService.countWhere(user_id=prc._user.id,item_id=rc.item_id) ) {				var WatchList = WatchlistService.new();				var Item = ItemService.get( rc.item_id );				var User = UserService.get( prc._user.id );				Watchlist.setItem( Item );				Watchlist.setUser( User );				WatchlistService.save( Watchlist );			}
+		}		Event.renderData(data=true,type='json');
+	}		function remove(event,rc,prc) {		WatchlistService.deleteWhere(user_id=prc._user.id,item_id=Event.getNumericValue('item_id',0));		Event.renderData(data=true,type='json');
+	}		function test(event,rc,prc) {		abort;
+	}		}

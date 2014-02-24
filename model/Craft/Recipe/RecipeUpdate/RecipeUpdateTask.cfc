@@ -1,0 +1,50 @@
+component persistent="false" {
+
+	results = { created = now(), createTick = getTickCount(), error={}, runCount = 0, lastTick=0, lastTS = '', uuid = createUUID() };
+	runStatus = "running";
+
+	function init( id, RecipeUpdateService ){
+		results.id = arguments.id;
+		variables.RecipeUpdateService = arguments.RecipeUpdateService;
+		return this;
+	}
+
+	function pause(){
+		runStatus = "paused";
+	}
+
+	function unPause(){
+		runStatus = "running";
+	}
+
+	function run(){
+		if( runStatus eq "paused" ){
+			return;
+		}
+		
+		try{
+			
+			var fc = createObject("java", "coldfusion.filter.FusionContext").init();
+			fc.getCurrent().setApplicationName("GW2Rothchild");
+			
+			RecipeUpdateService.updateRecipes();
+			results.runCount++;
+			writeLog("Inside run for id #results.id#! RunCount is now #results.runCount#.")
+		} catch( any e ){
+			writeLog("#results.id#!!!! #e.message#; #e.detail#");
+			results.error = e;
+		}
+		results.lastTick = getTickCount();
+		results.lastTS = now();
+
+	}
+
+	function getResults(){
+		return results;
+	}
+	
+	function getRunStatus() {
+		return runStatus;
+	}
+
+}

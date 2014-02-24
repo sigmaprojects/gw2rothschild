@@ -1,0 +1,156 @@
+table.table tr th.sort:hover {
+	cursor: pointer;
+}
+
+table.table tr td {
+	vertical-align:middle;
+}
+
+table.table tr.sub td {
+	border-top: none;
+	padding:0px 8px 0px 8px;
+}
+
+
+
+.copper {
+    color: #D47F46;
+    font-weight:bold;
+	font-size:1.2em;
+}
+
+.silver {
+    color: #787878;
+    font-weight:bold;
+	font-size:1.2em;
+}
+
+.gold {
+    color: #E68A00;
+    font-weight:bold;
+	font-size:1.2em;
+}
+
+.copper-img,
+.silver-img,
+.gold-img,
+.gem-img {
+    height: 16px;
+    width: 16px;
+    background-repeat:no-repeat;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-top: 1px;
+	vertical-align: top;
+}
+
+.copper-img {
+    background-image:url('/includes/images/copper.png');
+}
+.silver-img {
+    background-image:url('/includes/images/silver.png');
+}
+.gold-img {
+    background-image:url('/includes/images/gold.png');
+}
+.gem-img {
+    background-image:url('/includes/images/gem.png');
+}
+
+.watch, .unwatch {
+	cursor:pointer;
+}
+
+.table tr td.nopad {
+	/*padding:0px !important;*/
+}
+.clr {
+	clear:both;
+}
+
+
+.dropdown.hover:hover .dropdown-menu {
+    display: block;
+}
+ 
+.spacer5 {
+    margin-top: 5px;
+}
+.spacer10 {
+    margin-top: 10px;
+}
+.spacer15 {
+    margin-top: 15px;
+}
+.spacer20 {
+    margin-top: 20px;
+} 
+
+.econtainer {
+	position: relative;
+	padding: 45px 15px 15px;
+	margin: 0 -15px 15px;
+	background-color: #fafafa;
+	box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+	border-color: #e5e5e5 #eee #eee;
+	border-style: solid;
+	border-width: 1px 0;
+}
+.econtainer {
+	margin-left: 0;
+	margin-right: 0;
+	background-color: #fff;
+	border-width: 1px;
+	border-color: #ddd;
+	border-radius: 4px 4px 0 0;
+	box-shadow: none;
+}
+.econtainer:after {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #bbb;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.econtainer.features:after {
+	content: "Features";
+}
+
+
+.tt-hint {
+	display:none;
+}
+
+.tt-dropdown-menu {
+  width: 300px;
+  margin-top: 1px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
