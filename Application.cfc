@@ -8,7 +8,7 @@ component{
 	this.name = "GW2Rothchild";
 	this.sessionManagement = true;
 	this.sessionTimeout = createTimeSpan(0,0,30,0);
-	this.applicationTimeout = createTimeSpan(99,0,0,0);
+	this.applicationTimeout = createTimeSpan(999,0,0,0);
 	this.setClientCookies = true;
 
 	
@@ -62,7 +62,7 @@ component{
 	// application start
 	public boolean function onApplicationStart(){
 		
-		application.LexiconClient = new lib.LexiconClient('39a02229c8ac585e21799a94f622a6cc21ddc365');
+		application.LexiconClient = new Lexicon.LexiconClient('39a02229c8ac585e21799a94f622a6cc21ddc365');
 		
 		//USED FOR TRACKING WHICH METHOD IS BEING USED TO LOGIN
 		application.current_login_method = '';
