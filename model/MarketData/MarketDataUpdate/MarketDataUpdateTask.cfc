@@ -19,6 +19,7 @@ component persistent="false" {
 	}
 
 	function run(){
+		return; // NO LONGER NEEDED
 		if( runStatus eq "paused" ){
 			return;
 		}
