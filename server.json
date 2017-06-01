@@ -10,5 +10,6 @@
         "http":{
             "port":"8005"
         }
-    }
+    },
+    "openbrowser":false
 }
