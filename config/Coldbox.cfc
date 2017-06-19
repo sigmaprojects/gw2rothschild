@@ -112,7 +112,7 @@
 		};
 		
 		
-			mailSettings = Application.LexiconClient.get('GW2RothChild_mailSettings').data;
+			//mailSettings = Application.LexiconClient.get('GW2RothChild_mailSettings').data;
 		try {
 		} catch(any e) {
 			

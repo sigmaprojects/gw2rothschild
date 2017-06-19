@@ -18,7 +18,7 @@ component output=false  {
 	*/
 	public cfGW2DBAPI function init(
 		URI			= 'http://www.gw2db.com/json-api/',
-		GUID		= Application.LexiconClient.get('GW2RothChild_cfGW2DBAPI_GUID').data
+		GUID		= 'test'//Application.LexiconClient.get('GW2RothChild_cfGW2DBAPI_GUID').data
 	) {
 		
 		variables.APIURL = trim(arguments.URI);

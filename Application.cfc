@@ -62,7 +62,7 @@ component{
 	// application start
 	public boolean function onApplicationStart(){
 		
-		application.LexiconClient = new Lexicon.LexiconClient('39a02229c8ac585e21799a94f622a6cc21ddc365');
+		//application.LexiconClient = new Lexicon.LexiconClient('39a02229c8ac585e21799a94f622a6cc21ddc365');
 		
 		//USED FOR TRACKING WHICH METHOD IS BEING USED TO LOGIN
 		application.current_login_method = '';
@@ -75,16 +75,16 @@ component{
 		//FACEBOOK
 		application.facebook_access_token = '';
 		application.facebook_code = "";
-		application.facebook_appid = application.LexiconClient.get("GW2RothChild_facebook_appid").data;
-		application.facebook_secret = application.LexiconClient.get("GW2RothChild_facebook_secret").data;
+		//application.facebook_appid = application.LexiconClient.get("GW2RothChild_facebook_appid").data;
+		//application.facebook_secret = application.LexiconClient.get("GW2RothChild_facebook_secret").data;
 		application.facebook_baseurl = "https://www.facebook.com/dialog/oauth";
 		application.facebook_redirecturl = "https://gw2.sigmaprojects.org/multiLogin/processLogin";
 		//GOOGLE
 		application.google_access_token = "";
 		application.google_code = "GW2Rothchild";
-		application.google_client_id = application.LexiconClient.get("GW2RothChild_google_client_id").data;
-		application.google_apikey = application.LexiconClient.get("GW2RothChild_google_apikey").data;
-		application.google_secretkey = application.LexiconClient.get("GW2RothChild_google_secretkey").data;
+		//application.google_client_id = application.LexiconClient.get("GW2RothChild_google_client_id").data;
+		//application.google_apikey = application.LexiconClient.get("GW2RothChild_google_apikey").data;
+		//application.google_secretkey = application.LexiconClient.get("GW2RothChild_google_secretkey").data;
 		application.google_baseurl = "https://accounts.google.com/o/oauth2/auth";
 		application.google_redirecturl = "https://gw2.sigmaprojects.org/multiLogin/processLogin";
 		
